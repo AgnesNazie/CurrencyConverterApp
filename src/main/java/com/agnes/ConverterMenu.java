@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class ConverterMenu {
     private static final Scanner scanner = new Scanner(System.in);
 
-    static void display() {
+   public  static void display() {
         while (true) {
             System.out.println("\n Exchange Converter");
             System.out.println("1. Convert SEK to USD");
@@ -16,6 +16,7 @@ public class ConverterMenu {
             System.out.println("4. Convert EUR to SEK");
             System.out.println("5.Exit");
             System.out.println("Choose an option: ");
+
             String choice = scanner.nextLine();
             if (choice.equals("5")) {
                 System.out.println("Existing...");
@@ -30,20 +31,16 @@ public class ConverterMenu {
         String from = "", to = "";
         switch (choice) {
             case "1":
-                from = "SEK";
-                to = "USD";
+                from = "SEK"; to = "USD";
                 break;
             case "2":
-                from = "USD";
-                to = "SEK";
+                from = "USD"; to = "SEK";
                 break;
             case "3":
-                from = "SEK";
-                to = "EUR";
+                from = "SEK"; to = "EUR";
                 break;
             case "4":
-                from = "EUR";
-                to = "SEK";
+                from = "EUR"; to = "SEK";
                 break;
             default:
                 System.out.println("Invalid choice.");
@@ -52,10 +49,8 @@ public class ConverterMenu {
         double amount = Validator.getValidAmount();
         double convertedAmount = ExchangeConverter.convert(from, to, amount);
 
-        String timestamp = LocalDateTime.now()
-                .format(DateTimeFormatter.ofPattern("eeee-MM-dd HH:mm:ss"));
-        System.out.printf("Converted %.2f %s to %.2f %s (Date: %s)%n",
-                amount, from, convertedAmount, to, timestamp);
+        String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("eeee-MM-dd HH:mm:ss"));
+        System.out.printf("Converted %.2f %s to %.2f %s (Date: %s)%n", amount, from, convertedAmount, to, timestamp);
     }
 
 
