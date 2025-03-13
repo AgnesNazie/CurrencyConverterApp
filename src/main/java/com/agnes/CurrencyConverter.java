@@ -47,19 +47,19 @@ public class CurrencyConverter {
 
             switch (choice) {
                 case 1:
-                convertedAmount = amount * 0.97;
+                convertedAmount = amount * 0.095;
                 currency = "USD";
                 break;
                 case 2:
+                convertedAmount = amount * 10.52;
+                currency = "SEK";
+                break;
+                case 3:
                 convertedAmount = amount * 0.089;
                 currency = "EUR";
                 break;
-                case 3:
-                convertedAmount = amount * 10.31;
-                currency = "SEK";
-                break;
                 case 4:
-                convertedAmount = amount * 11.24;
+                convertedAmount = amount * 11.22;
                 currency = "SEK";
                 break;
                 default:
