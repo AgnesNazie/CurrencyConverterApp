@@ -50,7 +50,7 @@ public class ConverterMenu {
         double convertedAmount = ExchangeConverter.convert(from, to, amount);
 
         String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("eeee-MM-dd HH:mm:ss"));
-        System.out.printf("Converted %.2f %s to %.2f %s (Date: %s)%n", amount, from, convertedAmount, to, timestamp);
+        System.out.printf("Converted  %.2f %s to %.2f %s (Date: %s)%n", amount, from, convertedAmount, to, timestamp);
     }
 
 

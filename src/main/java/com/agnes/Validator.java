@@ -2,13 +2,15 @@ package com.agnes;
 
 import java.util.Scanner;
 
+
 public class Validator {
+
     private static final Scanner scanner = new Scanner(System.in);
 
     public static double getValidAmount() {
         while (true) {
             try {
-                System.out.println("Enter amount: ");
+                System.out.println("Enter amount in Currency: " );
                 double amount = Double.parseDouble(scanner.nextLine());
                 if (amount > 0) {
                     return amount;
